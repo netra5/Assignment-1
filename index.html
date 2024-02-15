@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- Header section -->
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+        <h1>Welcome to Our Pizza Order Form!</h1>
+        <p>Fill out the form below to customize your pizza order.</p>
+        <div>
+            <img src="pizza.jpg" alt="Delicious Pizza">
+        </div>
+       
+
+    </header>
+
+    <!-- Main content section -->
+    <main>
+       
+        <!-- Pizza Order Form -->
+        <form action="submit_order.php" method="post">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+            </fieldset>
+            
+            <!-- Pizza Details -->
+            <fieldset>
+                <legend>Pizza Details</legend>
+                <label for="quantity">Number of Pizzas:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select><br><br>
+                <label for="crust">Crust Type:</label><br>
+                <input type="radio" id="thin" name="crust" value="thin" checked>
+                <label for="thin">Thin Crust</label><br>
+                <input type="radio" id="thick" name="crust" value="thick">
+                <label for="thick">Thick Crust</label><br><br>
+                <label for="toppings">Toppings:</label><br>
+                <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+                <label for="pepperoni">Pepperoni</label><br>
+                <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label><br>
+                <input type="checkbox" id="onions" name="toppings[]" value="onions">
+                <label for="onions">Onions</label><br><br>
+                <label for="instructions">Special Instructions:</label><br>
+                <textarea id="instructions" name="instructions" rows="4" cols="50"></textarea><br><br>
+            </fieldset>
+            
+            <!-- Delivery Options -->
+            <fieldset>
+                <legend>Delivery Options</legend>
+                <input type="radio" id="takeout" name="delivery" value="takeout" checked>
+                <label for="takeout">Takeout</label><br>
+                <input type="radio" id="delivery" name="delivery" value="delivery">
+                <label for="delivery">Delivery</label><br><br>
+            </fieldset>
+            
+            <!-- Submit and Reset Buttons -->
+            <input type="reset" value="Reset">
+            <input type="submit" value="Place Order">
+        </form>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Pizza Delivery Service</p>
+    </footer>
+
+</body>
+</html>
